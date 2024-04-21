@@ -15,9 +15,9 @@ real loop time) and provides a report.
 
 Clone the repository to the local machine.
 
-### With RoboPLC manager installed
+### With RoboPLC Manager installed
 
-If RoboPLC manager is installed on the target machine, the tool can be flashed
+If RoboPLC Manager is installed on the target machine, the tool can be flashed
 with the following command (see
 [Flashing](https://info.bma.ai/en/actual/roboplc/flashing.html)):
 
@@ -26,10 +26,10 @@ robo flash
 ```
 
 (either edit `robo.toml` or use proper command-line arguments to specify the
-destination). After flashing, the report can be viewed at RoboPLC manager
+destination). After flashing, the report can be viewed at RoboPLC Manager
 `Metrics` page.
 
-### Without RoboPLC manager installed
+### Without RoboPLC Manager installed
 
 Install Rust and compile:
 
