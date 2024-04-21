@@ -1,0 +1,9 @@
+[package]
+name = "jmeter"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+num_cpus = "1.16.0"
+roboplc = { version = "0.1.45", features = ["metrics"] }

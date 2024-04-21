@@ -1,0 +1,8 @@
+[remote]
+url = "http://remote:7700"
+key = "secret"
+#timeout = 5
+
+[build]
+#cargo = "cross"
+#target = "aarch64-unknown-linux-gnu"
