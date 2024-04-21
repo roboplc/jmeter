@@ -45,7 +45,7 @@ cargo build --release
 Copy the binary to the target machine and run it. The report can be obtained with
 
 ```bash
-curl -s http://localhost:9000
+curl -s http://IP:9000
 ```
 
 and optionally connected to any Prometheus-compatible monitoring system.
