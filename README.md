@@ -29,6 +29,10 @@ robo flash
 destination). After flashing, the report can be viewed at RoboPLC Manager
 `Metrics` page.
 
+<img
+src="https://raw.githubusercontent.com/roboplc/jmeter/main/img/manager-metrics.png"
+width="300" />
+
 ### Without RoboPLC Manager installed
 
 Install Rust and compile:
