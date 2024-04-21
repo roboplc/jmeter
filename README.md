@@ -31,7 +31,7 @@ destination). After flashing, the report can be viewed at RoboPLC Manager
 
 <img
 src="https://raw.githubusercontent.com/roboplc/jmeter/main/img/manager-jitter-metrics.png"
-width="300" />
+width="400" />
 
 ### Without RoboPLC Manager installed
 
