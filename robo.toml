@@ -1,6 +1,6 @@
 [remote]
 url = "http://remote:7700"
-key = "secret"
+key = "roboplc"
 #timeout = 5
 
 [build]
