@@ -6,4 +6,4 @@ publish = false
 
 [dependencies]
 num_cpus = "1.16.0"
-roboplc = { version = "0.1.45", features = ["metrics"] }
+roboplc = { version = "0.1.48", features = ["metrics"] }
