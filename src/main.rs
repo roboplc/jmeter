@@ -1,8 +1,23 @@
+use std::io::BufRead;
 use std::time::Duration;
 
 use roboplc::metrics::{counter, gauge, histogram};
 use roboplc::prelude::*;
 use roboplc::time::interval;
+
+fn num_cpus() -> usize {
+    let f = std::fs::File::open("/proc/cpuinfo").unwrap();
+    let reader = std::io::BufReader::new(f);
+    let lines = reader.lines();
+    let mut count = 0;
+    for line in lines {
+        let line = line.unwrap();
+        if line.starts_with("processor") {
+            count += 1;
+        }
+    }
+    count
+}
 
 struct Meter {
     name: &'static str,
@@ -77,7 +92,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .apply()?;
     roboplc::thread_rt::prealloc_heap(10_000_000)?;
     let mut controller = Controller::<(), ()>::new();
-    let n_cpus = num_cpus::get();
+    let n_cpus = num_cpus();
     gauge!("CPUS_TOTAL").set(n_cpus as f64);
     gauge!("INTERVAL_US").set(interval.as_micros() as f64);
     for cpu in 0..n_cpus {
