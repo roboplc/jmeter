@@ -80,6 +80,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let n_cpus = roboplc::thread_rt::num_cpus()?;
     gauge!("CPUS_TOTAL").set(n_cpus as f64);
     gauge!("INTERVAL_US").set(interval.as_micros() as f64);
+    let _governor = roboplc::thread_rt::CpuGovernor::performance(0..n_cpus)?;
     for cpu in 0..n_cpus {
         // executed once, leak is safe
         let name = Box::leak(format!("jmCPU{:02}", cpu).into_boxed_str());

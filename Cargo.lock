@@ -888,9 +888,9 @@ checksum = "adad44e29e4c806119491a7f06f03de4d1af22c3a680dd47f1e6e179439d1f56"
 
 [[package]]
 name = "roboplc"
-version = "0.1.50"
+version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ebc88c9794e1ac849bbbc2c9356c348864eacfc2a54b82d3b32594acad73bfc2"
+checksum = "30c1f74ef5e5d5c3fffc092b9dbacca72a80ec67b77a63e268bc73d53011c15e"
 dependencies = [
  "binrw",
  "bma-ts",
