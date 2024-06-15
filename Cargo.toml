@@ -5,4 +5,4 @@ edition = "2021"
 publish = false
 
 [dependencies]
-roboplc = { version = "0.2.1", features = ["metrics"] }
+roboplc = { version = "0.3", features = ["metrics"] }

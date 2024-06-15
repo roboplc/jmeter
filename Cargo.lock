@@ -888,9 +888,9 @@ checksum = "adad44e29e4c806119491a7f06f03de4d1af22c3a680dd47f1e6e179439d1f56"
 
 [[package]]
 name = "roboplc"
-version = "0.2.1"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "30c1f74ef5e5d5c3fffc092b9dbacca72a80ec67b77a63e268bc73d53011c15e"
+checksum = "f414c66b3624105bdea70fc6a74201aefa40680b497211651b263599596e1ce7"
 dependencies = [
  "binrw",
  "bma-ts",
@@ -906,6 +906,7 @@ dependencies = [
  "parking_lot_rt",
  "pin-project",
  "roboplc-derive",
+ "rtsc",
  "serde",
  "serial",
  "signal-hook",
@@ -916,9 +917,35 @@ dependencies = [
 
 [[package]]
 name = "roboplc-derive"
-version = "0.1.9"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2df85afb56626335a278e0937cfc623a417a5e6db8b0a04ab5317cd1fb7ba592"
+checksum = "1d8b9831e06aafab06f91700b3c17bf15f458df9d0c8d40543512973dc4bcb1d"
+dependencies = [
+ "darling",
+ "proc-macro2",
+ "quote",
+ "syn 1.0.109",
+]
+
+[[package]]
+name = "rtsc"
+version = "0.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9ce5f8146b97533b4296716bd86e29d51f183e2db76cf9a8a28bfc38386b7244"
+dependencies = [
+ "bma-ts",
+ "object-id",
+ "parking_lot_rt",
+ "pin-project",
+ "rtsc-derive",
+ "thiserror",
+]
+
+[[package]]
+name = "rtsc-derive"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "478d8d87ce09eb1fb06a75170e56123af8bd9ed5ec1b5b2ad8d0d9dac2fc6f52"
 dependencies = [
  "darling",
  "proc-macro2",
@@ -1134,18 +1161,18 @@ dependencies = [
 
 [[package]]
 name = "thiserror"
-version = "1.0.58"
+version = "1.0.61"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "03468839009160513471e86a034bb2c5c0e4baae3b43f79ffc55c4a5427b3297"
+checksum = "c546c80d6be4bc6a00c0f01730c08df82eaa7a7a61f11d656526506112cc1709"
 dependencies = [
  "thiserror-impl",
 ]
 
 [[package]]
 name = "thiserror-impl"
-version = "1.0.58"
+version = "1.0.61"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c61f3ba182994efc43764a46c018c347bc492c79f024e705f46567b418f6d4f7"
+checksum = "46c3384250002a6d5af4d114f2845d37b57521033f30d5c3f46c4d70e1197533"
 dependencies = [
  "proc-macro2",
  "quote",
